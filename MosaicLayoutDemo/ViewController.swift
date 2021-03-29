@@ -64,13 +64,15 @@ class ViewController: UIViewController {
 
 extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        9
+        4*12
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        cell.layer.borderColor = UIColor.red.cgColor
+        cell.layer.borderColor = UIColor.systemRed.cgColor
         cell.layer.borderWidth = 2
+        cell.layer.cornerRadius = 8
+        cell.backgroundColor = UIColor.tertiarySystemGroupedBackground
         return cell
     }
 }
